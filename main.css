@@ -1,0 +1,178 @@
+    .custom-shape-divider-bottom-1617540664 {
+        position: relative;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        grid-area: wave;
+        margin-top: 3rem;
+    }
+    
+    .custom-shape-divider-bottom-1617540664 svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 85px;
+    }
+    
+    .custom-shape-divider-bottom-1617540664 .shape-fill {
+        fill: white;
+    }
+    /* This is main css */
+    
+     :root {
+        --Hfont: 2.5rem;
+        --pfont: 1.2rem;
+        --margin: 0 3rem;
+    }
+    
+    body {
+        font-family: 'Poppins', sans-serif;
+        box-sizing: border-box;
+        margin: 0 auto;
+        max-width: 1600px;
+        height: 1000vh;
+    }
+    
+    .head {
+        border: 2px solid black;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 'nav nav' 'hleft hright' 'wave wave';
+        background: linear-gradient( to bottom, #fd1900, #000000), url(./wavesOpacity.svg);
+        background-position: bottom left;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    
+    nav {
+        display: flex;
+        background-color: blue;
+        color: white;
+        justify-content: space-between;
+        grid-area: nav;
+        background: transparent;
+        margin: var(--margin);
+    }
+    
+    nav a {
+        text-decoration: none;
+        color: white;
+        margin: 0 0.6rem;
+        font-size: var(--pfont);
+        /* border: 1px solid white; */
+    }
+    
+    nav li {
+        list-style: none;
+    }
+    
+    nav h1 {
+        margin: 0 0.6rem;
+        font-size: var(--Hfont);
+        font-weight: bold;
+    }
+    
+    nav ul {
+        display: flex;
+        align-items: center;
+    }
+    
+    .hleft {
+        grid-area: hleft;
+        background: transparent;
+        color: white;
+        margin: var(--margin);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    
+    .hleft h1 {
+        font-size: calc(1.3*var(--Hfont));
+        font-weight: bolder;
+    }
+    
+    .hleft p {
+        font-size: var(--pfont);
+        width: fit-content;
+    }
+    
+    .hleft a {
+        text-decoration: none;
+        width: fit-content;
+        color: black;
+        font-size: var(--pfont);
+        font-weight: bolder;
+        border-radius: 5px;
+        background-color: white;
+        display: block;
+        padding: 0.6rem 10%;
+    }
+    
+    .hright {
+        grid-area: hright;
+        background: transparent;
+    }
+    
+    .hright img {
+        width: 100%;
+        transform-origin: center;
+        transform: scale(0.7);
+    }
+    
+    .custom-shape-divider-bottom-1617540664 {
+        grid-area: wave;
+    }
+    
+    @media screen and (max-width: 1050px) {
+         :root {
+            --Hfont: 2rem;
+            --pfont: 0.9rem;
+        }
+        .hleft a {
+            padding: 0.5rem 2rem;
+        }
+    }
+    
+    @media screen and (max-width: 800px) {
+        .head {
+            /* grid-template-areas: 'nav nav' 'hleft left' 'hright hright' 'wave wave';
+            /* grid-template-columns: none; */
+            display: block;
+            background: linear-gradient( to bottom, #fd1900, #000000), url(./fun.svg);
+            background-repeat: no-repeat;
+            background-position: bottom;
+        }
+        nav h1 {
+            width: fit-content;
+            margin: auto;
+        }
+        .hleft {
+            width: 70%;
+            margin: auto;
+            margin-top: 2rem;
+            margin-bottom: 0;
+            text-align: center;
+            border: 2px solid white;
+            height: 70vh;
+        }
+        .hleft a {
+            margin: auto;
+            width: 30%;
+        }
+    }
+    
+    @media screen and (max-width: 661px) {
+         :root {
+            --Hfont: 1.7rem;
+            --pfont: 0.75rem;
+        }
+        nav ul {
+            display: none;
+        }
+        .hleft {
+            width: 90vw;
+        }
+    }
