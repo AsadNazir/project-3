@@ -36,7 +36,6 @@
     }
     
     .head {
-        border: 2px solid black;
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-areas: 'nav nav' 'hleft hright' 'wave wave';
@@ -141,7 +140,7 @@
             /* grid-template-areas: 'nav nav' 'hleft left' 'hright hright' 'wave wave';
             /* grid-template-columns: none; */
             display: block;
-            background: linear-gradient( to bottom, #fd1900, #000000), url(./fun.svg);
+            background: linear-gradient( to bottom, #283c86, #45a247), url(./fun.svg);
             background-repeat: no-repeat;
             background-position: bottom;
         }
@@ -155,7 +154,6 @@
             margin-top: 2rem;
             margin-bottom: 0;
             text-align: center;
-            border: 2px solid white;
             height: 70vh;
         }
         .hleft a {
